@@ -138,19 +138,20 @@ nav h1 {
 /* Smartphones (600px para baixo) */
 @media only screen and (max-width: 600px) {
     .navbar {
-        text-align: center;
+        display: flex;
+        justify-content: center;
     }
 
     .links {
         display: none;
     }
 
-    .container-2 {
-        padding-bottom: 50px;
-    }
-
     .perfil {
         height: 300px;
         width: 300px;
+    }
+
+    .tables {
+        margin-top: 80px;
     }
 }

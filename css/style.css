@@ -6,7 +6,6 @@
 }
 
 body {
-    min-height: 100vh;
     background: rgb(0, 0, 0, 0.9);
     background-repeat: no-repeat;
     background-position: right top;
@@ -16,7 +15,6 @@ body {
 .container {
     position: relative;
     width: 100%;
-    height: 100vh;
 }
 
 .bolhas {
@@ -39,11 +37,11 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateY(200vh) scale(0)
+        transform: translateY(700vh) scale(0)
     }
 
     100% {
-        transform: translateY(-30vh) scale(1)
+        transform: translateY(-0vh) scale(1)
     }
 }
 
@@ -57,7 +55,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin: 1rem 2rem;
+    margin: 0 2rem;
 }
 
 nav h1 {
@@ -76,7 +74,7 @@ nav h1 {
 }
 
 .wrap {
-    height: 100vh;
+    height: 100%;
 }
 
 .container-2 {
@@ -140,6 +138,145 @@ nav h1 {
     padding: 15px;
 }
 
+.timeline-background {
+    height: 100%;
+}
+
+.h2-timeline {
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding: 40px 0 0 0;
+}
+
+.timeline-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 100px 15px;
+}
+
+.timeline {
+    position: relative;
+    list-style: none;
+    display: inline-block;
+}
+
+.timeline h2 {
+    text-align: center;
+}
+
+.timeline li {
+    padding: 20px;
+    background-color: rgb(0, 0, 0, 0.4);
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.timeline li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline,
+.timeline-content h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+
+.timeline,
+.timeline-content p {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 300;
+    color: #fff
+}
+
+.timeline,
+.timeline-content,
+.date {
+    font-size: 12px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    color: #fff;
+}
+
+@media(min-width: 992px) {
+    .timeline li {
+        width: 50%;
+        position: relative;
+        margin-bottom: 50px;
+    }
+
+    .timeline li:nth-child(odd)::before {
+        transform: translate(50%, -50%);
+        right: -30px;
+    }
+
+    .timeline li:nth-child(even)::before {
+        transform: translate(-50%, -50%);
+        left: -30px;
+    }
+
+    .date {
+        position: absolute;
+        top: -30px;
+        color: whitesmoke;
+    }
+
+    .timeline li:hover::before {
+        background-color: royalblue;
+    }
+
+    .timeline li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translate(-30px);
+        border-radius: 20px 0 20px 20px;
+    }
+
+    .timeline li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translate(30px);
+        border-radius: 0 20px 20px 20px;
+    }
+
+    .timeline li::before {
+        content: "";
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        background-color: #aaa;
+        top: 0px;
+        z-index: 1;
+    }
+
+    .timeline li:nth-child(odd)::after {
+        content: "";
+        position: absolute;
+        height: calc(100% + 40px);
+        width: 2px;
+        background-color: #aaa;
+        top: 0;
+        right: -31px;
+    }
+
+    .timeline li:nth-child(even):not(:last-child)::after {
+        content: "";
+        position: absolute;
+        height: calc(100% + 40px);
+        width: 2px;
+        background-color: #aaa;
+        top: 0;
+        left: -31px;
+    }
+}
+
 
 /* Smartphones (600px para baixo) */
 @media only screen and (max-width: 600px) {
@@ -150,6 +287,11 @@ nav h1 {
 
     .links {
         display: none;
+    }
+
+    .hi h2,
+    p {
+        font-size: 27px;
     }
 
     .perfil {

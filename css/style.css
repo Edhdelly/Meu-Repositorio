@@ -75,12 +75,18 @@ nav h1 {
     background-color: rgb(128, 0, 128, 0.3);
 }
 
+.wrap {
+    height: 100vh;
+}
+
 .container-2 {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
 }
+
 
 .hi {
     /* border: 1px solid white; */

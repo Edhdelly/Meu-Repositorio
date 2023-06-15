@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500;700&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
     /* font-size: 17px; */
 }
 
@@ -38,7 +40,7 @@ body {
 
 @keyframes animar {
     0% {
-        transform: translateY(400vh) scale(0)
+        transform: translateY(800vh) scale(0)
     }
 
     100% {
@@ -55,7 +57,7 @@ body {
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0 2rem;
 }
 
@@ -98,6 +100,7 @@ nav h1 {
 
 .react {
     color: blue;
+    font-weight: 1000;
 }
 
 .perfil {
@@ -105,7 +108,7 @@ nav h1 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
-    border-radius: 120%;
+    border-radius: 200%;
     height: 450px;
     width: 450px;
     padding: 0 5%;
@@ -134,6 +137,7 @@ nav h1 {
 
 
 .container-table h3 {
+
     font-size: 25px;
     text-align: center;
     padding: 15px;
@@ -145,9 +149,12 @@ nav h1 {
 
 .h2-timeline {
     text-align: center;
-    font-size: 30px;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
-    padding: 40px 0 0 0;
+    margin: 40px 0 0 0;
+    border-bottom: 1px solid grey;
+    border-top: 1px solid grey;
 }
 
 .timeline-container {
@@ -208,11 +215,15 @@ nav h1 {
     color: #fff;
 }
 
-.gallery-section h2 {
+.gallery-h2 {
     text-align: center;
     font-size: 22px;
     color: white;
-    padding: 20px 0 30px 0;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 90px;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
 }
 
 .gallery-container {
@@ -224,7 +235,8 @@ nav h1 {
 }
 
 .gallery-items {
-    width: 340px;
+    max-width: 340px;
+    width: 100%;
     height: 340px;
     border: 10px solid #FFF;
     box-shadow: 5px 5px 5px #0006;
@@ -244,6 +256,7 @@ nav h1 {
     align-items: center;
     flex-direction: column;
     color: whitesmoke;
+    padding-bottom: 25px;
 }
 
 .img-container p,

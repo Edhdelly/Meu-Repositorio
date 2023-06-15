@@ -9,8 +9,8 @@
 
 body {
     background: rgb(0, 0, 0, 0.9);
-    background-repeat: no-repeat;
-    background-position: right top;
+    background-repeat: repeat;
+    background-position: center center;
     background-attachment: fixed;
 }
 
@@ -20,6 +20,7 @@ body {
     display: flex;
     justify-content: space-around;
     z-index: -100;
+
 }
 
 .bolhas span {
@@ -42,11 +43,11 @@ body {
 /* Animação das bolhas subindo */
 @keyframes animar {
     0% {
-        transform: translateY(700vh) scale(0)
+        transform: translateY(100vh) scale(0)
     }
 
     100% {
-        transform: translateY(-100vh) scale(1)
+        transform: translateY(0) scale(1)
     }
 }
 

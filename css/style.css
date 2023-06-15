@@ -5,7 +5,6 @@
     margin: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    /* font-size: 17px; */
 }
 
 body {
@@ -15,11 +14,7 @@ body {
     background-attachment: fixed;
 }
 
-.container {
-    position: relative;
-    width: 100%;
-}
-
+/* Bolhas background */
 .bolhas {
     position: relative;
     display: flex;
@@ -38,22 +33,24 @@ body {
     animation: animar calc(60s / var(--i)) linear infinite;
 }
 
-@keyframes animar {
-    0% {
-        transform: translateY(800vh) scale(0)
-    }
-
-    100% {
-        transform: translateY(-0vh) scale(1)
-    }
-}
-
 .bolhas span:nth-of-type(even) {
     background: white;
     box-shadow: 0 0 0 0.625rem rgba(255, 255, 255, 0.9),
         0 0 3.125rem rgba(255, 255, 255, 0.8);
 }
 
+/* Animação das bolhas subindo */
+@keyframes animar {
+    0% {
+        transform: translateY(700vh) scale(0)
+    }
+
+    100% {
+        transform: translateY(-100vh) scale(1)
+    }
+}
+
+/* Apresentação */
 nav {
     display: flex;
     flex-wrap: wrap;
@@ -65,22 +62,11 @@ nav h1 {
     color: white
 }
 
-.links a {
-    margin-left: auto;
-    text-decoration: none;
-    font-size: 25px;
-    color: white;
-    border: 2px solid purple;
-    padding: 5px;
-    border-radius: 20px;
-    background-color: rgb(128, 0, 128, 0.3);
-}
-
 .wrap {
     height: 100%;
 }
 
-.container-2 {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,32 +74,33 @@ nav h1 {
     height: 100%;
 }
 
-
+/* Sobre mim */
 .hi {
-    /* border: 1px solid white; */
     color: white;
     font-size: 26px;
     padding: 20px;
     text-align: center;
 }
 
-
 .react {
     color: blue;
     font-weight: 1000;
 }
 
+/* Foto de perfil */
 .perfil {
     background-image: url(../img/fotoperfil.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 200%;
+    max-width: 300px;
     height: 300px;
-    width: 300px;
+    width: 100%;
     padding: 0 5%;
 }
 
+/* Botão do linkedin */
 .linkedin button {
     width: 100px;
     height: 40px;
@@ -131,10 +118,11 @@ nav h1 {
     cursor: pointer;
 }
 
+
+/* Skills/Habilidades */
 .tables {
     margin-top: 50px;
     display: flex;
-    /* border: 1px solid green; */
     justify-content: space-around;
     width: 100%;
     color: white;
@@ -142,7 +130,6 @@ nav h1 {
 }
 
 .container-table {
-    /* border: 1px solid red; */
     width: 300px;
     display: flex;
     align-items: center;
@@ -151,15 +138,14 @@ nav h1 {
     margin: 1rem;
 }
 
-
-
 .container-table h3 {
-
     font-size: 25px;
     text-align: center;
     padding: 15px;
 }
 
+
+/*Timeline*/
 .timeline-background {
     height: 100%;
 }
@@ -180,8 +166,6 @@ nav h1 {
     margin: auto;
     padding: 100px 15px;
 }
-
-
 
 .timeline {
     position: relative;
@@ -232,6 +216,7 @@ nav h1 {
     color: #fff;
 }
 
+/* Galeria de projetos */
 .gallery-h2 {
     text-align: center;
     font-size: 22px;
@@ -285,6 +270,7 @@ nav h1 {
     transform: scale(1.1);
 }
 
+/* Meus contatos */
 .contacts-section,
 .contacts-div {
     display: flex;
@@ -308,7 +294,6 @@ nav h1 {
     border-bottom: 1px solid grey;
 }
 
-
 .contacts-div p,
 .contacts-div button {
     padding: 5px;
@@ -330,21 +315,7 @@ nav h1 {
     border: 1px solid blue;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* Responsivo da Timeline */
 @media(min-width: 992px) {
     .timeline li {
         width: 50%;
@@ -436,11 +407,9 @@ nav h1 {
     }
 
     .perfil {
-        background-size: cover;
-        border-radius: 200%;
-        height: 300px;
-        width: 300px;
-        padding: 0 5%;
+        max-width: 250px;
+        width: 100%;
+        height: 250px;
     }
 
     .tables {

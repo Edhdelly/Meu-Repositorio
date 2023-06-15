@@ -85,7 +85,7 @@ nav h1 {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
 }
 
 
@@ -104,13 +104,13 @@ nav h1 {
 }
 
 .perfil {
-    background-image: url(../img/fotoperfil.jpg);
+    background-image: url(../img/fotoperfil.png);
     background-position: center;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     border-radius: 200%;
-    height: 450px;
-    width: 450px;
+    height: 300px;
+    width: 300px;
     padding: 0 5%;
 }
 
@@ -436,8 +436,11 @@ nav h1 {
     }
 
     .perfil {
+        background-size: cover;
+        border-radius: 200%;
         height: 300px;
         width: 300px;
+        padding: 0 5%;
     }
 
     .tables {

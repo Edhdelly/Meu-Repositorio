@@ -57,7 +57,7 @@ body {
 nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     margin: 0 2rem;
 }
 
@@ -112,6 +112,23 @@ nav h1 {
     height: 450px;
     width: 450px;
     padding: 0 5%;
+}
+
+.linkedin button {
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+    margin-top: 30px;
+}
+
+.linkedin button:hover {
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+    cursor: pointer;
 }
 
 .tables {
@@ -268,9 +285,50 @@ nav h1 {
     transform: scale(1.1);
 }
 
+.contacts-section,
+.contacts-div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    flex-direction: column;
+    color: white;
+    font-size: 22px;
+    margin: 0 2%;
+    padding-bottom: 80px;
+}
+
+.contacts-section h2 {
+    text-align: center;
+    font-size: 22px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 40px 0 50px 0;
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
 
 
+.contacts-div p,
+.contacts-div button {
+    padding: 5px;
+}
 
+.contacts-div button {
+    width: 100px;
+    height: 40px;
+    background-color: blue;
+    border: 1px solid white;
+    border-radius: 20px;
+    color: white;
+}
+
+.contacts-div button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: blue;
+    border: 1px solid blue;
+}
 
 
 
@@ -361,7 +419,7 @@ nav h1 {
 }
 
 
-/* Smartphones (600px para baixo) */
+/* Smartphones (700px para baixo) */
 @media only screen and (max-width: 700px) {
     .navbar {
         display: flex;
@@ -389,5 +447,10 @@ nav h1 {
     .container-table p {
         font-size: 20px;
         font-weight: 300;
+    }
+
+    .contacts-section,
+    .contacts-div p {
+        font-size: 17px;
     }
 }
